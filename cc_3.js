@@ -1,4 +1,3 @@
-// Create customer records
 let customers = [
   {
     name: "Ben Dover",
@@ -17,13 +16,24 @@ let customers = [
   }
 ];
 
-// Add a new customer
+
 customers.push({
   name: "Harry P. Ness",
   email: "harry.ness@gmail.com",
   purchases: ["Tablet", "Stylus"]
 });
 
-// Remove the first customer
+
 customers.shift();
 
+
+customers[0].email = "mike.ock.new_email@gmail.com";
+
+customers[0].purchases.push("Wireless Charger");
+
+
+customers.forEach(function(customer) {
+  console.log(
+    `Name: ${customer.name}, Email: ${customer.email}, Total Purchases: ${customer.purchases.length}`
+  );
+});
